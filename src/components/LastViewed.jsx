@@ -25,6 +25,7 @@ const LastViewed = () => {
       price: 1200,
     },
   ];
+  //hello
   return (
     <div className="max-w-[1300px] mx-auto">
       <div className="bg-blue-700 text-3xl font-bold p-3 rounded-t-2xl text-white">
