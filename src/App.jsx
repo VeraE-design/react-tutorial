@@ -16,7 +16,7 @@ import ConditionalRendering from "./components/ConditionalRendering";
 import SimpleState from "./components/SimpleState";
 import User from "./components/User";
 import ComplexState from "./components/ComplexState";
-import ComplexStateArray  from "./components/ComplexStateArray";
+import ComplexStateArray from "./components/ComplexStateArray";
 import ExampleArray from "./components/ExampleArray";
 import SimpleEffect from "./components/SimpleEffect";
 import FetchData from "./components/FetchData";
@@ -24,15 +24,18 @@ import FetchUsers from "./components/FetchUsers";
 import GetAuthors from "./components/GetAuthors";
 import Recipe from "./components/Recipe";
 import SimpleForm from "./components/SimpleForm";
+import MultipleForm from "./components/MultipleForm";
+import OtherInputs from "./components/OtherInputs";
+import AxiosExample from "./components/AxiosExample";
+import TestDaisy from "./components/TestDaisy";
+import ReactHooksForm from "./components/ReactHooksForm";
 
 function App() {
   return (
     <>
-    <SimpleForm />
+      <ReactHooksForm />
     </>
   );
 }
 
 export default App;
-
-

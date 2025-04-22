@@ -212,3 +212,37 @@ UI(styling) data
 
 const myName = 'Ade'
 data would have to change
+
+//
+UseEffect
+it allow us to run functions on the inittail loading of the page 
+and on every re render
+
+custom hook
+
+exort useFetch = (api) => {
+  const [data, seData] = useState([])
+
+}
+
+controlled- inputs
+
+<swiper>
+testimonial.map((t) => {
+
+})
+ <swiperslide>1</swiperslide>
+ <swiperslide>2</swiperslide>
+ <swiperslide>3</swiperslide>
+ <swiperslide>4</swiperslide>
+
+ tailwind 
+
+ daisyui
+ 
+ react-icons
+ react-loader
+
+ axios - data fetching
+ react-hook-forms
+ yup
