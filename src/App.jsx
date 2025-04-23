@@ -1,39 +1,44 @@
-import Navbar from "./components/Navbar";
+import "./App.css";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Store from "./pages/Store";
+import Header from "./components/Header";
 import Footer from "./components/Footer";
-import Hero from "./components/hero";
-import Contact from "./components/Contact";
-import Products from "./components/Products";
-import Dynamic from "./components/Dynamic";
-import Props from "./components/props";
-import JumiaClone from "./components/JumiaClone";
-import SimpleList from "./components/SimpleList";
-import ComplexList from "./components/ComplexList";
-import MyStore from "./components/MyStore";
-import LastViewed from "./components/LastViewed";
-import PropChildren from "./components/PropChildren";
-import EventHandling from "./components/EventHandling";
-import ConditionalRendering from "./components/ConditionalRendering";
-import SimpleState from "./components/SimpleState";
-import User from "./components/User";
-import ComplexState from "./components/ComplexState";
-import ComplexStateArray from "./components/ComplexStateArray";
-import ExampleArray from "./components/ExampleArray";
-import SimpleEffect from "./components/SimpleEffect";
-import FetchData from "./components/FetchData";
-import FetchUsers from "./components/FetchUsers";
-import GetAuthors from "./components/GetAuthors";
-import Recipe from "./components/Recipe";
-import SimpleForm from "./components/SimpleForm";
-import MultipleForm from "./components/MultipleForm";
-import OtherInputs from "./components/OtherInputs";
-import AxiosExample from "./components/AxiosExample";
-import TestDaisy from "./components/TestDaisy";
-import ReactHooksForm from "./components/ReactHooksForm";
+import NotFound from "./pages/NotFound";
+import Login from "./pages/Login";
+import Timeline from "./pages/Timeline";
+import SingleTweets from "./pages/SingleTweets";
+
+//store page --- /store
+//homepage - /
+//about-us
 
 function App() {
   return (
     <>
-      <ReactHooksForm />
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/homepage" element={<Navigate to="/" />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/about-us" element={<Navigate to="/about" />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/timeline" element={<Timeline/>}/>
+          <Route path="/timeline/:id "element={<SingleTweets/>}/>
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+        <Footer />
+      </Router>
     </>
   );
 }
