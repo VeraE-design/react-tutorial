@@ -14,7 +14,8 @@ import Footer from "./components/Footer";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
 import Timeline from "./pages/Timeline";
-import SingleTweets from "./pages/SingleTweets";
+import SingleTweet from "./pages/SingleTweet";
+import DashboardLayout from "./pages/DashboardLayout";
 
 //store page --- /store
 //homepage - /
@@ -32,9 +33,15 @@ function App() {
           <Route path="/about-us" element={<Navigate to="/about" />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/store" element={<Store />} />
+          <Route path="/timeline" element={<Timeline />} />
+          <Route path="/timeline/:id" element={<SingleTweet />} />
+          <Route path="/dashboard" element={<DashboardLayout />}>
+            {/* children would be here */}
+            <Route index element={<h1>Home DashBoard</h1>} />
+            <Route path="trash" element={<h1>Trash Side</h1>} />
+            <Route path="spam" element={<h1>Spam Side</h1>} />
+          </Route>
           <Route path="/login" element={<Login />} />
-          <Route path="/timeline" element={<Timeline/>}/>
-          <Route path="/timeline/:id "element={<SingleTweets/>}/>
           <Route path="*" element={<NotFound />} />
         </Routes>
         <Footer />
