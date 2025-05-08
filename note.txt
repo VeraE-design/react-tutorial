@@ -287,4 +287,8 @@ context api
 
 useRef
 
+Global state
+context api-  store
+store (val1, val 2)
+
 react optimization
